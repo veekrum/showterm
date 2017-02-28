@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: showterm
+  pool: 5
+  timeout: 5000
+  username: showterm
+  password: showterm
