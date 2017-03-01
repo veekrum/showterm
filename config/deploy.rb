@@ -46,3 +46,9 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
       execute "service restart"  ## -> line you should add
     end
   end
+
+ task :execute_on_server do
+  on "bikramthapa@localhost" do
+    execute "ls"
+  end
+end
