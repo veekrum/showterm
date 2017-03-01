@@ -42,7 +42,7 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 
   desc 'Restart application'
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
+    on 'localhost' do
       execute "service restart"  ## -> line you should add
     end
   end
@@ -54,10 +54,10 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 #   end
 # end
 
-role :demo, %w{bikramthapa@localhost}
-task :uptime do
-  on roles(:demo), in: :parallel do |host|
-    uptime = capture(:uptime)
-    puts "#{host.hostname} reports: #{uptime}"
-  end
-end
+# role :demo, %w{bikramthapa@localhost}
+# task :uptime do
+#   on roles(:demo), in: :parallel do |host|
+#     uptime = capture(:uptime)
+#     puts "#{host.hostname} reports: #{uptime}"
+#   end
+# end
