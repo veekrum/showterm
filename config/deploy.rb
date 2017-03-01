@@ -40,10 +40,12 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-  desc 'Restart application'
-  task :deploy 
+  namespace :deploy do 
+  
     on "localhost" do
-      execute " cd ~/home/bikramthapa/showterm-bikram/current && rails s "  ## -> line you should add
+#      execute " /home/bikramthapa/showterm-bikram/current && rails s "  ## -> line you should add
+        execute "/home/bikramthapa/#{fetch(:application)} #{rails s}"
+
     end
   end
 
