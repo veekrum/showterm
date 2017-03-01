@@ -8,9 +8,9 @@ set :repo_url, "git@github.com:veekrum/showterm.git"
 
 
 
+	
 
-
-set :user, 'deploy'
+set :user, 'bikramthapa'
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

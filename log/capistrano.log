@@ -14,3 +14,78 @@
   INFO ---------------------------------------------------------------------------
   INFO [96982e94] Running /usr/bin/env mkdir -p /tmp as root@127.0.0.1
  DEBUG [96982e94] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 14:31:54 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9ee6af58] Running /usr/bin/env mkdir -p /tmp as bikramthapa@127.0.0.1
+ DEBUG [9ee6af58] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cb84e207] Running /usr/bin/env #<StringIO:0x00555a639f2208> /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh as bikramthapa@127.0.0.1
+ DEBUG [cb84e207] Command: /usr/bin/env #<StringIO:0x00555a639f2208> /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh
+  INFO [06f7c37a] Running /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh as bikramthapa@127.0.0.1
+ DEBUG [06f7c37a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh
+  INFO [f407e29f] Running /usr/bin/env git ls-remote git@github.com:veekrum/showterm.git HEAD as bikramthapa@127.0.0.1
+ DEBUG [f407e29f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git ls-remote git@github.com:veekrum/showterm.git HEAD )
+  INFO [87602e69] Running /usr/bin/env mkdir -p /home/deploy/showterm-bikram/shared /home/deploy/showterm-bikram/releases as bikramthapa@127.0.0.1
+ DEBUG [87602e69] Command: /usr/bin/env mkdir -p /home/deploy/showterm-bikram/shared /home/deploy/showterm-bikram/releases
+ DEBUG [8b852b38] Running [ -f /home/deploy/showterm-bikram/current/REVISION ] as bikramthapa@127.0.0.1
+ DEBUG [8b852b38] Command: [ -f /home/deploy/showterm-bikram/current/REVISION ]
+ DEBUG [7160bfff] Running /usr/bin/env cat /home/deploy/showterm-bikram/current/REVISION 2>/dev/null as bikramthapa@127.0.0.1
+ DEBUG [7160bfff] Command: /usr/bin/env cat /home/deploy/showterm-bikram/current/REVISION 2>/dev/null
+ DEBUG [5ec7e546] Running [ -f /home/deploy/showterm-bikram/repo/HEAD ] as bikramthapa@127.0.0.1
+ DEBUG [5ec7e546] Command: [ -f /home/deploy/showterm-bikram/repo/HEAD ]
+  INFO The repository mirror is at /home/deploy/showterm-bikram/repo
+ DEBUG [d0c814c4] Running if test ! -d /home/deploy/showterm-bikram/repo; then echo "Directory does not exist '/home/deploy/showterm-bikram/repo'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [d0c814c4] Command: if test ! -d /home/deploy/showterm-bikram/repo; then echo "Directory does not exist '/home/deploy/showterm-bikram/repo'" 1>&2; false; fi
+  INFO [7510f032] Running /usr/bin/env git remote set-url origin git@github.com:veekrum/showterm.git as bikramthapa@127.0.0.1
+ DEBUG [7510f032] Command: cd /home/deploy/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git remote set-url origin git@github.com:veekrum/showterm.git )
+  INFO [34718dae] Running /usr/bin/env git remote update --prune as bikramthapa@127.0.0.1
+ DEBUG [34718dae] Command: cd /home/deploy/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [53cb44a2] Running if test ! -d /home/deploy/showterm-bikram/repo; then echo "Directory does not exist '/home/deploy/showterm-bikram/repo'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [53cb44a2] Command: if test ! -d /home/deploy/showterm-bikram/repo; then echo "Directory does not exist '/home/deploy/showterm-bikram/repo'" 1>&2; false; fi
+  INFO [4a3756c4] Running /usr/bin/env mkdir -p /home/deploy/showterm-bikram/releases/20170301084655 as bikramthapa@127.0.0.1
+ DEBUG [4a3756c4] Command: cd /home/deploy/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env mkdir -p /home/deploy/showterm-bikram/releases/20170301084655 )
+  INFO [4b847adc] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/showterm-bikram/releases/20170301084655 as bikramthapa@127.0.0.1
+ DEBUG [4b847adc] Command: cd /home/deploy/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/showterm-bikram/releases/20170301084655 )
+ DEBUG [682385db] Running if test ! -d /home/deploy/showterm-bikram/repo; then echo "Directory does not exist '/home/deploy/showterm-bikram/repo'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [682385db] Command: if test ! -d /home/deploy/showterm-bikram/repo; then echo "Directory does not exist '/home/deploy/showterm-bikram/repo'" 1>&2; false; fi
+ DEBUG [01ece4eb] Running /usr/bin/env git rev-list --max-count=1 master as bikramthapa@127.0.0.1
+ DEBUG [01ece4eb] Command: cd /home/deploy/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [fa2824e0] Running if test ! -d /home/deploy/showterm-bikram/releases/20170301084655; then echo "Directory does not exist '/home/deploy/showterm-bikram/releases/20170301084655'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [fa2824e0] Command: if test ! -d /home/deploy/showterm-bikram/releases/20170301084655; then echo "Directory does not exist '/home/deploy/showterm-bikram/releases/20170301084655'" 1>&2; false; fi
+  INFO [e810b146] Running /usr/bin/env echo "" >> REVISION as bikramthapa@127.0.0.1
+ DEBUG [e810b146] Command: cd /home/deploy/showterm-bikram/releases/20170301084655 && /usr/bin/env echo "" >> REVISION
+  INFO [47884330] Running /usr/bin/env ln -s /home/deploy/showterm-bikram/releases/20170301084655 /home/deploy/showterm-bikram/releases/current as bikramthapa@127.0.0.1
+ DEBUG [47884330] Command: /usr/bin/env ln -s /home/deploy/showterm-bikram/releases/20170301084655 /home/deploy/showterm-bikram/releases/current
+  INFO [8280e259] Running /usr/bin/env mv /home/deploy/showterm-bikram/releases/current /home/deploy/showterm-bikram as bikramthapa@127.0.0.1
+ DEBUG [8280e259] Command: /usr/bin/env mv /home/deploy/showterm-bikram/releases/current /home/deploy/showterm-bikram
+ DEBUG [38947453] Running /usr/bin/env ls -x /home/deploy/showterm-bikram/releases as bikramthapa@127.0.0.1
+ DEBUG [38947453] Command: /usr/bin/env ls -x /home/deploy/showterm-bikram/releases
+ DEBUG [fb85de41] Running if test ! -d /home/deploy/showterm-bikram/releases; then echo "Directory does not exist '/home/deploy/showterm-bikram/releases'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [fb85de41] Command: if test ! -d /home/deploy/showterm-bikram/releases; then echo "Directory does not exist '/home/deploy/showterm-bikram/releases'" 1>&2; false; fi
+  INFO [0bf514d8] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170301084655 by bikramthapa" >> /home/deploy/showterm-bikram/revisions.log as bikramthapa@127.0.0.1
+ DEBUG [0bf514d8] Command: cd /home/deploy/showterm-bikram/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170301084655 by bikramthapa" >> /home/deploy/showterm-bikram/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 14:32:56 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7b636c18] Running /usr/bin/env mkdir -p /tmp as bikramthapa@127.0.0.1
+ DEBUG [7b636c18] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 14:57:50 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7924836f] Running /usr/bin/env mkdir -p /tmp as bikramthapa@127.0.0.1
+ DEBUG [7924836f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7924836f] Finished in 8.334 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh 100.0%
+  INFO [1564b662] Running /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh as bikramthapa@127.0.0.1
+ DEBUG [1564b662] Command: /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh
+  INFO [1564b662] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [eb608dbc] Running /usr/bin/env git ls-remote git@github.com:veekrum/showterm.git HEAD as bikramthapa@127.0.0.1
+ DEBUG [eb608dbc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git ls-remote git@github.com:veekrum/showterm.git HEAD )
+ DEBUG [eb608dbc] 	aa46e93611114c67d804fed07309ccfaa3b794bb	HEAD
+  INFO [eb608dbc] Finished in 15.596 seconds with exit status 0 (successful).
+  INFO [3f50a580] Running /usr/bin/env mkdir -p /home/deploy/showterm-bikram/shared /home/deploy/showterm-bikram/releases as bikramthapa@127.0.0.1
+ DEBUG [3f50a580] Command: /usr/bin/env mkdir -p /home/deploy/showterm-bikram/shared /home/deploy/showterm-bikram/releases
+ DEBUG [3f50a580] 	mkdir: cannot create directory ‘/home/deploy’
+ DEBUG [3f50a580] 	: Permission denied
+mkdir: cannot create directory ‘/home/deploy’: Permission denied
