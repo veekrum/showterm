@@ -41,9 +41,9 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 # set :keep_releases, 5
 
   desc 'Restart application'
-  task :restart do
+  task : deploy do
     on 'localhost' do
-      execute "service restart"  ## -> line you should add
+      execute " cd ~/home/bikramthapa/showterm-bikram/current && rails s "  ## -> line you should add
     end
   end
 
