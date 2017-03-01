@@ -9,3 +9,8 @@
   INFO ---------------------------------------------------------------------------
   INFO [331cf2f4] Running /usr/bin/env mkdir -p /tmp as root@127.0.0.1
  DEBUG [331cf2f4] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 14:21:32 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [96982e94] Running /usr/bin/env mkdir -p /tmp as root@127.0.0.1
+ DEBUG [96982e94] Command: /usr/bin/env mkdir -p /tmp

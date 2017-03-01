@@ -2,7 +2,7 @@
 lock "3.7.2"
 
 
-server '127.0.0.1', user: 'root', roles: %w{web app}
+server '127.0.0.1', user: 'bikramthapa', roles: %w{web app}
 set :application, "showterm-bikram"
 set :repo_url, "git@github.com:veekrum/showterm.git"
 
