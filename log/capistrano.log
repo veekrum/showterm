@@ -4,3 +4,8 @@
   INFO ---------------------------------------------------------------------------
   INFO [c9b2a482] Running /usr/bin/env mkdir -p /tmp as root@192.168.2.167
  DEBUG [c9b2a482] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 14:19:43 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [331cf2f4] Running /usr/bin/env mkdir -p /tmp as root@127.0.0.1
+ DEBUG [331cf2f4] Command: /usr/bin/env mkdir -p /tmp
