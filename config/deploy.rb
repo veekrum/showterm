@@ -49,6 +49,7 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 
  task :execute_on_server do
   on "bikramthapa@localhost" do
-    execute "ls"
+    execute "cd /home/bikramthapa/showterm-bikram/current"
+    execute "rails s"
   end
 end
