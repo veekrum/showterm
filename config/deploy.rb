@@ -47,12 +47,12 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
     end
   end
 
- task :execute_on_server do
-  on "bikramthapa@localhost" do
-    execute "cd /home/bikramthapa/showterm-bikram/current"
-    execute "rails s"
-  end
-end
+#  task :execute_on_server do
+#   on "bikramthapa@localhost" do
+#     execute "cd /home/bikramthapa/showterm-bikram/current"
+#     execute "rails s"
+#   end
+# end
 
 role :demo, %w{bikramthapa@localhost}
 task :uptime do

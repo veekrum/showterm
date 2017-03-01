@@ -331,3 +331,32 @@ mkdir: cannot create directory ‘/home/deploy’: Permission denied
   INFO [3de50225] Running /usr/bin/env echo "Branch master (at 2e5e2a1f83dd04a405b5d06a0048b98facd5e53b) deployed as release 20170301100906 by bikramthapa" >> /home/bikramthapa/showterm-bikram/revisions.log as bikramthapa@127.0.0.1
  DEBUG [3de50225] Command: cd /home/bikramthapa/showterm-bikram/releases && /usr/bin/env echo "Branch master (at 2e5e2a1f83dd04a405b5d06a0048b98facd5e53b) deployed as release 20170301100906 by bikramthapa" >> /home/bikramthapa/showterm-bikram/revisions.log
   INFO [3de50225] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 16:05:41 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [03768335] Running /usr/bin/env mkdir -p /tmp as bikramthapa@127.0.0.1
+ DEBUG [03768335] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7fa2ed16] Running /usr/bin/env mkdir -p /tmp as bikramthapa@localhost
+ DEBUG [7fa2ed16] Command: /usr/bin/env mkdir -p /tmp
+  INFO [03768335] Finished in 14.017 seconds with exit status 0 (successful).
+  INFO [7fa2ed16] Finished in 17.920 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh 100.0%
+  INFO [66227cfe] Running /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh as bikramthapa@127.0.0.1
+ DEBUG [66227cfe] Command: /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh
+  INFO [66227cfe] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 16:08:17 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b088e150] Running /usr/bin/env mkdir -p /tmp as bikramthapa@127.0.0.1
+ DEBUG [b088e150] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d750b00c] Running /usr/bin/env mkdir -p /tmp as bikramthapa@localhost
+ DEBUG [d750b00c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d750b00c] Finished in 5.300 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 16:08:51 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [55093544] Running /usr/bin/env mkdir -p /tmp as bikramthapa@127.0.0.1
+ DEBUG [55093544] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4bc80c5d] Running /usr/bin/env mkdir -p /tmp as bikramthapa@localhost
+ DEBUG [4bc80c5d] Command: /usr/bin/env mkdir -p /tmp
