@@ -44,7 +44,7 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
   
     on "localhost" do
 #      execute " /home/bikramthapa/showterm-bikram/current && rails s "  ## -> line you should add
-        execute "/home/bikramthapa/#{fetch(:application) && rails s } "
+        execute "/home/bikramthapa/#{fetch(:application)} "
 
     end
   end
