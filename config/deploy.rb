@@ -41,11 +41,11 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 # set :keep_releases, 5
 
   namespace :deploy do 
-  
+    task command do
     on "localhost" do
-     execute " /home/bikramthapa/showterm-bikram/current "  ## -> line you should add
+     execute " /home/bikramthapa/showterm-bikram/current #{rails s}"  ## -> line you should add
        # execute "/home/bikramthapa/#{fetch(:application)} "
-
+     end
     end
   end
 
