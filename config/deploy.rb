@@ -43,8 +43,8 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
   namespace :deploy do 
   
     on "localhost" do
-#      execute " /home/bikramthapa/showterm-bikram/current && rails s "  ## -> line you should add
-        execute "/home/bikramthapa/#{fetch(:application)} "
+     execute " /home/bikramthapa/showterm-bikram/current  #{ rails s }"  ## -> line you should add
+       # execute "/home/bikramthapa/#{fetch(:application)} "
 
     end
   end
