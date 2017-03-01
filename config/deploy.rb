@@ -43,7 +43,7 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
   namespace :deploy do |command|
     task command do
     on "localhost" do
-     execute " /home/bikramthapa/showterm-bikram/current #{ touch file}"  ## -> line you should add
+     execute " /home/bikramthapa/showterm-bikram/current #{ rails s }"  ## -> line you should add
        # execute "/home/bikramthapa/#{fetch(:application)} "
      end
     end
