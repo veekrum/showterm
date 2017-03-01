@@ -1,0 +1,6 @@
+# Logfile created on 2017-02-28 15:56:01 +0545 by logger.rb/v1.2.7
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-28 15:56:01 +0545 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [c9b2a482] Running /usr/bin/env mkdir -p /tmp as root@192.168.2.167
+ DEBUG [c9b2a482] Command: /usr/bin/env mkdir -p /tmp
