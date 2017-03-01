@@ -2,12 +2,16 @@
 lock "3.7.2"
 
 
-erver '127.0.0.1', user: 'root', roles: %w{web app}
+server '127.0.0.1', user: 'root', roles: %w{web app}
 set :application, "showterm-bikram"
 set :repo_url, "git@github.com:veekrum/showterm.git"
-set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
 
 
+
+
+
+set :user, 'deploy'
+set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -39,6 +43,6 @@ set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute "service thin restart"  ## -> line you should add
+      execute "service restart"  ## -> line you should add
     end
   end
