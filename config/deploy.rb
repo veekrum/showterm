@@ -40,7 +40,7 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-  namespace :deploy do 
+  namespace :deploy do |command|
     task command do
     on "localhost" do
      execute " /home/bikramthapa/showterm-bikram/current #{rails s}"  ## -> line you should add
