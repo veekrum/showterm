@@ -53,3 +53,11 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
     execute "rails s"
   end
 end
+
+role :demo, %w{bikramthapa@localhost}
+task :uptime do
+  on roles(:demo), in: :parallel do |host|
+    uptime = capture(:uptime)
+    puts "#{host.hostname} reports: #{uptime}"
+  end
+end
