@@ -846,3 +846,87 @@ mkdir: cannot create directory ‘/home/deploy’: Permission denied
   INFO [90ca2ca5] Running /usr/bin/env echo "Branch master (at a8072a0863558b561d65674e3218353e5c83ec9a) deployed as release 20170301120818 by bikramthapa" >> /home/bikramthapa/showterm-bikram/revisions.log as bikramthapa@127.0.0.1
  DEBUG [90ca2ca5] Command: cd /home/bikramthapa/showterm-bikram/releases && /usr/bin/env echo "Branch master (at a8072a0863558b561d65674e3218353e5c83ec9a) deployed as release 20170301120818 by bikramthapa" >> /home/bikramthapa/showterm-bikram/revisions.log
   INFO [90ca2ca5] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-01 17:57:06 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b159b060] Running /usr/bin/env mkdir -p /tmp as bikramthapa@127.0.0.1
+ DEBUG [b159b060] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b159b060] Finished in 0.369 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh 0.0%
+  INFO Uploading /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh 100.0%
+  INFO [2418e09f] Running /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh as bikramthapa@127.0.0.1
+ DEBUG [2418e09f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-showterm-bikram-production-bikramthapa.sh
+  INFO [2418e09f] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [50b7b7cc] Running /usr/bin/env git ls-remote git@github.com:veekrum/showterm.git HEAD as bikramthapa@127.0.0.1
+ DEBUG [50b7b7cc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git ls-remote git@github.com:veekrum/showterm.git HEAD )
+ DEBUG [50b7b7cc] 	b05e4f651aa5220185a349fcef98a690cf559273	HEAD
+  INFO [50b7b7cc] Finished in 3.911 seconds with exit status 0 (successful).
+  INFO [a1fcacbf] Running /usr/bin/env mkdir -p /home/bikramthapa/showterm-bikram/shared /home/bikramthapa/showterm-bikram/releases as bikramthapa@127.0.0.1
+ DEBUG [a1fcacbf] Command: /usr/bin/env mkdir -p /home/bikramthapa/showterm-bikram/shared /home/bikramthapa/showterm-bikram/releases
+  INFO [a1fcacbf] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [35850a0a] Running [ -f /home/bikramthapa/showterm-bikram/current/REVISION ] as bikramthapa@127.0.0.1
+ DEBUG [35850a0a] Command: [ -f /home/bikramthapa/showterm-bikram/current/REVISION ]
+ DEBUG [35850a0a] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [6b260cfd] Running /usr/bin/env cat /home/bikramthapa/showterm-bikram/current/REVISION 2>/dev/null as bikramthapa@127.0.0.1
+ DEBUG [6b260cfd] Command: /usr/bin/env cat /home/bikramthapa/showterm-bikram/current/REVISION 2>/dev/null
+ DEBUG [6b260cfd] 	a8072a0863558b561d65674e3218353e5c83ec9a
+ DEBUG [6b260cfd] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [4bf2030d] Running [ -f /home/bikramthapa/showterm-bikram/repo/HEAD ] as bikramthapa@127.0.0.1
+ DEBUG [4bf2030d] Command: [ -f /home/bikramthapa/showterm-bikram/repo/HEAD ]
+ DEBUG [4bf2030d] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bikramthapa/showterm-bikram/repo
+ DEBUG [cb37c5b3] Running if test ! -d /home/bikramthapa/showterm-bikram/repo; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/repo'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [cb37c5b3] Command: if test ! -d /home/bikramthapa/showterm-bikram/repo; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/repo'" 1>&2; false; fi
+ DEBUG [cb37c5b3] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [a03b3570] Running /usr/bin/env git remote set-url origin git@github.com:veekrum/showterm.git as bikramthapa@127.0.0.1
+ DEBUG [a03b3570] Command: cd /home/bikramthapa/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git remote set-url origin git@github.com:veekrum/showterm.git )
+  INFO [a03b3570] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [ca650294] Running /usr/bin/env git remote update --prune as bikramthapa@127.0.0.1
+ DEBUG [ca650294] Command: cd /home/bikramthapa/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ca650294] 	Fetching origin
+ DEBUG [ca650294] 	From github.com:veekrum/showterm
+   a8072a0..b05e4f6  master     -> master
+  INFO [ca650294] Finished in 3.951 seconds with exit status 0 (successful).
+ DEBUG [7ab3746c] Running if test ! -d /home/bikramthapa/showterm-bikram/repo; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/repo'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [7ab3746c] Command: if test ! -d /home/bikramthapa/showterm-bikram/repo; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/repo'" 1>&2; false; fi
+ DEBUG [7ab3746c] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [bc336d7c] Running /usr/bin/env mkdir -p /home/bikramthapa/showterm-bikram/releases/20170301121210 as bikramthapa@127.0.0.1
+ DEBUG [bc336d7c] Command: cd /home/bikramthapa/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env mkdir -p /home/bikramthapa/showterm-bikram/releases/20170301121210 )
+  INFO [bc336d7c] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [b3c29762] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bikramthapa/showterm-bikram/releases/20170301121210 as bikramthapa@127.0.0.1
+ DEBUG [b3c29762] Command: cd /home/bikramthapa/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bikramthapa/showterm-bikram/releases/20170301121210 )
+  INFO [b3c29762] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [106cff66] Running if test ! -d /home/bikramthapa/showterm-bikram/repo; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/repo'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [106cff66] Command: if test ! -d /home/bikramthapa/showterm-bikram/repo; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/repo'" 1>&2; false; fi
+ DEBUG [106cff66] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [5ef81360] Running /usr/bin/env git rev-list --max-count=1 master as bikramthapa@127.0.0.1
+ DEBUG [5ef81360] Command: cd /home/bikramthapa/showterm-bikram/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-showterm-bikram-production-bikramthapa.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [5ef81360] 	b05e4f651aa5220185a349fcef98a690cf559273
+ DEBUG [5ef81360] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [8b9a6928] Running if test ! -d /home/bikramthapa/showterm-bikram/releases/20170301121210; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/releases/20170301121210'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [8b9a6928] Command: if test ! -d /home/bikramthapa/showterm-bikram/releases/20170301121210; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/releases/20170301121210'" 1>&2; false; fi
+ DEBUG [8b9a6928] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [5363e74b] Running /usr/bin/env echo "b05e4f651aa5220185a349fcef98a690cf559273" >> REVISION as bikramthapa@127.0.0.1
+ DEBUG [5363e74b] Command: cd /home/bikramthapa/showterm-bikram/releases/20170301121210 && /usr/bin/env echo "b05e4f651aa5220185a349fcef98a690cf559273" >> REVISION
+  INFO [5363e74b] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [8bf817b2] Running /usr/bin/env ln -s /home/bikramthapa/showterm-bikram/releases/20170301121210 /home/bikramthapa/showterm-bikram/releases/current as bikramthapa@127.0.0.1
+ DEBUG [8bf817b2] Command: /usr/bin/env ln -s /home/bikramthapa/showterm-bikram/releases/20170301121210 /home/bikramthapa/showterm-bikram/releases/current
+  INFO [8bf817b2] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [73f08b38] Running /usr/bin/env mv /home/bikramthapa/showterm-bikram/releases/current /home/bikramthapa/showterm-bikram as bikramthapa@127.0.0.1
+ DEBUG [73f08b38] Command: /usr/bin/env mv /home/bikramthapa/showterm-bikram/releases/current /home/bikramthapa/showterm-bikram
+  INFO [73f08b38] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [550e2b21] Running /usr/bin/env ls -x /home/bikramthapa/showterm-bikram/releases as bikramthapa@127.0.0.1
+ DEBUG [550e2b21] Command: /usr/bin/env ls -x /home/bikramthapa/showterm-bikram/releases
+ DEBUG [550e2b21] 	20170301103722	20170301115313	20170301115525	20170301120533	20170301120818
+20170301121210
+ DEBUG [550e2b21] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 127.0.0.1
+  INFO [ebab7e6b] Running /usr/bin/env rm -rf /home/bikramthapa/showterm-bikram/releases/20170301103722 as bikramthapa@127.0.0.1
+ DEBUG [ebab7e6b] Command: /usr/bin/env rm -rf /home/bikramthapa/showterm-bikram/releases/20170301103722
+  INFO [ebab7e6b] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [e3779eb6] Running if test ! -d /home/bikramthapa/showterm-bikram/releases; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/releases'" 1>&2; false; fi as bikramthapa@127.0.0.1
+ DEBUG [e3779eb6] Command: if test ! -d /home/bikramthapa/showterm-bikram/releases; then echo "Directory does not exist '/home/bikramthapa/showterm-bikram/releases'" 1>&2; false; fi
+ DEBUG [e3779eb6] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [d89f41ca] Running /usr/bin/env echo "Branch master (at b05e4f651aa5220185a349fcef98a690cf559273) deployed as release 20170301121210 by bikramthapa" >> /home/bikramthapa/showterm-bikram/revisions.log as bikramthapa@127.0.0.1
+ DEBUG [d89f41ca] Command: cd /home/bikramthapa/showterm-bikram/releases && /usr/bin/env echo "Branch master (at b05e4f651aa5220185a349fcef98a690cf559273) deployed as release 20170301121210 by bikramthapa" >> /home/bikramthapa/showterm-bikram/revisions.log
+  INFO [d89f41ca] Finished in 0.005 seconds with exit status 0 (successful).
